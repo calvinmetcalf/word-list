@@ -1,2 +1,2 @@
 'use strict';
-module.exports = __dirname + '/words.txt';
+module.exports = require('./words.json');
