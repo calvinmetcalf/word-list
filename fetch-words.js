@@ -8,5 +8,5 @@ got(url, function (err, res) {
 		throw new Error(err);
 	}
 
-	fs.writeFileSync('words.txt', res.trim());
+	fs.writeFileSync('words.json', JSON.stringify(res.trim().split('\n')));
 });
