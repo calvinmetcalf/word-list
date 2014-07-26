@@ -19,7 +19,7 @@
   },
   "files": [
     "index.js",
-    "words.txt"
+    "words.json"
   ],
   "keywords": [
     "word",
