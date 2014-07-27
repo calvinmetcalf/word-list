@@ -1,30 +1,26 @@
-# word-list [![Build Status](https://travis-ci.org/sindresorhus/word-list.svg?branch=master)](https://travis-ci.org/sindresorhus/word-list)
+# word-list-json
 
 > List of [English words](https://github.com/atebits/Words/blob/master/Words/en.txt)
 
 Useful if you're creating a word game or just want some words to work with.
 
-Used by [word-stream](https://github.com/sindresorhus/word-stream) and [random-word](https://github.com/sindresorhus/random-word).
+Used by [name-me](https://github.com/calvinmetcalf/name-me).
 
 
 ## Install
 
 ```bash
-$ npm install --save word-list
+$ npm install --save word-list-json
 ```
 
 
 ## Usage
 
 ```js
-var fs = require('fs');
-
-// returns the path to the word list which is separated by `\n`
-var wordListPath = require('word-list');
-
-var wordArray = fs.readFileSync(wordListPath, 'utf8').split('\n');
-//=> [..., 'abmhos', 'abnegate', ...]
+// a json array of words
+var wordList = require('word-list-json');
 ```
+wordlist is sorted by length, in addition to the usual length property the array also has a 'lengths' property which is a dict with keys of word lengths and values which are the array index after the last word of that length e.g. what the array length would be if it had no words with a longer length.
 
 
 ## License

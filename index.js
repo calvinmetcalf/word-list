@@ -1,2 +1,4 @@
 'use strict';
-module.exports = require('./words.json');
+var words = require('./words.json');
+module.exports = words.words;
+words.words.lengths = words.lengths;
